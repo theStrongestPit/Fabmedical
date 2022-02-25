@@ -1,5 +1,6 @@
 name: content-web
 
+# This workflow is triggered on push to the 'content-web' directory of the  master branch of the repository
 on:
  push:
    branches:
@@ -15,6 +16,8 @@ on:
        required: true
        default: 'warning'
 
+# Environment variables are defined so that they can be used throughout the job definitions.
+# resourceGroupName，containerRegistryName，containerRegistry替换为自己的
 env:
  imageRepository: 'content-web'
  resourceGroupName: 'fabmedical-wuy'
